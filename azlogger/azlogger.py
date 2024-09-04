@@ -79,7 +79,7 @@ log_filepath = os.path.join(script_dir, log_filename)
 if log_to_file:
     # Set up file handler with rotation
     file_handler = logging.handlers.RotatingFileHandler(
-        log_filepath, maxBytes=10 * 1024 * 1024, backupCount=5
+        log_filepath, maxBytes=10 * 1024 * 1024, backupCount=5, encoding='utf-8'
     )
     file_handler.setLevel(logging.DEBUG)
 
